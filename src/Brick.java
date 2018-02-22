@@ -2,8 +2,8 @@ import java.awt.*;
 
 public class Brick {
 
-    int widthBrick = 17;
-    int heightBrick = 70;
+    static int widthBrick = 17;
+    static int heightBrick = 70;
     int x, y;
     Board board;
     Ball ball;
@@ -33,5 +33,11 @@ public class Brick {
         g.setColor(brickColors[type]);
         g.fillRect(x, y, widthBrick, heightBrick);
 
+    }
+    public static int getWidth(){
+        return widthBrick;
+    }
+    public static int getHeight(){
+        return heightBrick;
     }
 }
