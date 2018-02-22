@@ -2,15 +2,22 @@ import java.awt.*;
 
 public class Ball {
     //Declare variables
-    int diameterBall = 17;
+    int diameterBall = 25;
     int speedBall = 5;
     int x, y;
     double dx, dy = speedBall;
     Board board;
+
+    public void move(Paddle other){
+
+
+
+    }
+
     public Ball(Board board){
         this.board = board;
-        x=100;
-        y=100;
+        x=400;
+        y=493;
     }
 
     public void posXY(int x, int y){

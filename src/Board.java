@@ -8,10 +8,37 @@ public class Board extends  JPanel implements ActionListener{
 
     Ball ball;
     Paddle userPaddle;
+    Brick[][] arrayRow;
     Brick pExtend, pDecrease,pFast, pSlow, bLarge, bSmall, bFast, bSlow, brick;
+    final int gap = 1;
+    int row = 5;
+    int rowNum;
+    int col = 7;
+    int bWidth = 5;
+    int bHeight = 6;
     Timer timer;
-    int ticks = 0;
+    static int ticks = 0;
     static Brick[][] brickArr;
+
+
+    /*public Board(int rowNum, Board board){
+        this.board = board;
+        this.rowNum = rowNum;
+
+        arrayRow = new Brick[col][row];
+        bWidth = (600-(2*gap))*row;
+
+        for(int i = 0; i < arrayRow[0].length; i++){
+            for(int j = 0; j < arrayRow.length; j++){
+
+                arrayRow[j][i] = new Brick(gap*(i)+(bWidth*i),(-gap*(j))-(Brick.getHeight()*j),rowNum,bWidth,Brick.getHeight(),this);
+
+            }
+
+
+        }
+
+    }*/
 
     public Board(Game game){
         setPreferredSize(new Dimension(800, 600));
@@ -21,6 +48,7 @@ public class Board extends  JPanel implements ActionListener{
         timer = new Timer(1000/60, this);
         timer.start();
         brickArr = new Brick[7][8];
+        Start();
 
     }
     public static void Start(){
@@ -43,10 +71,27 @@ public class Board extends  JPanel implements ActionListener{
 
     }
 
+    public static int tellTicks (int ticks){
+
+        return ticks;
+
+    }
+
     @Override
-    public void actionPerformed(ActionEvent e) {
+     public void actionPerformed(ActionEvent e) {
         ticks += 1;
 
     }
 
+    public int getRow(){
+
+        return row;
+
+    }
+
+    public int getCol(){
+
+        return col;
+
+    }
 }

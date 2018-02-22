@@ -2,9 +2,9 @@ import java.awt.*;
 
 public class Paddle {
 
-    int widthPaddle = 20;
-    int heightPaddle = 70;
-    int x = 50, y = 50;
+    int widthPaddle = 200;
+    int heightPaddle = 24;
+    int x = 318, y = 520;
     Board board;
     Ball ball;
     Game game;

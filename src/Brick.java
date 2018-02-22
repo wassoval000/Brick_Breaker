@@ -2,8 +2,8 @@ import java.awt.*;
 
 public class Brick {
 
-    static int widthBrick = 17;
-    static int heightBrick = 70;
+    static int widthBrick = 5;
+    static int heightBrick = 5;
     int x, y;
     Board board;
     Ball ball;
