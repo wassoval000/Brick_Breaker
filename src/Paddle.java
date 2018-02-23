@@ -23,4 +23,17 @@ public class Paddle {
         g.fillRect(x, y, widthPaddle, heightPaddle);
     }
 
+    public void userMove(){
+
+        if(game.isLeftPressed()){
+            if(x>0){
+                x -= 5;
+            }
+
+
+        }
+
+    }
+
 }
+

@@ -4,6 +4,7 @@ import java.awt.event.KeyListener;
 
 public class Game extends JFrame implements KeyListener {
     Board board;
+    boolean leftPressed = false;
 
     public Game(){
 
@@ -29,11 +30,22 @@ public class Game extends JFrame implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        if(e.getKeyCode()==KeyEvent.VK_LEFT){
+            leftPressed = true;
+        }
 
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
+        if(e.getKeyCode()==KeyEvent.VK_LEFT){
+            leftPressed = false;
+        }
 
+
+    }
+
+    public boolean isLeftPressed() {
+        return leftPressed;
     }
 }
